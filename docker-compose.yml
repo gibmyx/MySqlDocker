@@ -7,19 +7,19 @@ services:
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
-            MARIADB_ROOT_PASSWORD: "${MARIADB_ROOT_PASSWORD}"
+            MARIADB_ROOT_PASSWORD: "${MARIADB_PASSWORD}"
             MARIADB_DATABASE: "${MARIADB_DATABASE}"
             MARIADB_USER: "${MARIADB_USER}"
             MARIADB_PASSWORD: "${MARIADB_PASSWORD}"
         networks:
-            - docker-service
+            - network-microservice
         volumes:
             - mariadb-data:/var/lib/mysql
             - mariadb-config:/etc/mysql
 
 networks:
-    docker-service:
-        driver: bridge
+    network-microservice:
+        external: true
 
 volumes:
     mariadb-data:
