@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mariaDbDocker.iml" filepath="$PROJECT_DIR$/.idea/mariaDbDocker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../microservice-one/.idea/microservice-one.iml" filepath="$PROJECT_DIR$/../microservice-one/.idea/microservice-one.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../microservice-two/.idea/microservice-two.iml" filepath="$PROJECT_DIR$/../microservice-two/.idea/microservice-two.iml" />
     </modules>
   </component>
 </project>
