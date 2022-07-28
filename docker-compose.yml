@@ -2,15 +2,16 @@
 version: '3'
 services:
     mariadb:
-        image: mariadb:latest
+        image: mysql:8.0-oracle
         container_name: "${APP_NAME}-mariadb"
         ports:
             - '${FORWARD_DB_PORT:-3306}:3306'
         environment:
-            MARIADB_ROOT_PASSWORD: "${MARIADB_PASSWORD}"
-            MARIADB_DATABASE: "${MARIADB_DATABASE}"
-            MARIADB_USER: "${MARIADB_USER}"
-            MARIADB_PASSWORD: "${MARIADB_PASSWORD}"
+            MYSQL_ROOT_PASSWORD: "${MYSQL_PASSWORD}"
+            MYSQL_DATABASE: "${MYSQL_DATABASE}"
+            MYSQL_USER: "${MYSQL_USER}"
+            MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
         networks:
             - network-microservice
         volumes:
