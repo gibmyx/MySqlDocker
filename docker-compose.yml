@@ -15,14 +15,14 @@ services:
         networks:
             - network-microservice
         volumes:
-            - mariadb-data:/var/lib/mysql
-            - mariadb-config:/etc/mysql
+            - mysql-data:/var/lib/mysql
+            - mysql-config:/etc/mysql
 
 networks:
     network-microservice:
         external: true
 
 volumes:
-    mariadb-data:
-    mariadb-config:
+    mysql-data:
+    mysql-config:
 
